@@ -133,17 +133,72 @@
             1   0   0   0
             -------------
             1   1   0   1
+            
+            xor - if both 0 - 0 or else 1 - 1 result --> 0 | 0 - 1 or 1 - 0 --> 1
+            
+            5 ^ 8
+            0   1   0   1
+            1   0   0   0
+            -------------
+            1   1   0   1
+            
+            ~ - can be applied on a single value.
+            0   -   1
+            1   -   0
+            
+            converts +ve to -ve 
+            
+            - 8 - 
+            
+            ~ 8 - -9 
+            -1 -2 -3 -4 -5 -6 -7 -8 -9
+            
+            ~ -9 = 8
+            
+            0 1 2   3   4   5   6   7   8
+            
+            Left shift & right shift: 
+                shifts the bit. Only apply it on a single number
+                
+                syntax : 
+                    value << no.of bits to move
+                
+                ex : 
+                    5 << 2
+                
+                    0   1   0   1
+                    -------------
+                0    1   0   1  0  --- 1 bit
+                ------------------
+            0   1   0   1   0   0   --- 1 bit === total 2 bits    
+            ---------------------
+             
+            5 >> 2
+            
+            0   1   0   1
+            -------------
+            0   0   1   0   | 1  --- 1 bit
+            -------------
+            0   0   0   1   |   0   1   --- 1 bit === total 2 bits
+            -----------
+            0   0   0   1  - 1
         ---------------------------------
         5. comparison/ relational (>, <, >=, <=, ==, !=)
             used to compare data and will provide the boolean as a result
-        ----------------------------------
-        6. increment/ decrement
+        -----------------------------------------
         7. membership
         8. identity operator
 """
 
-print(5 & 8)
-print(5 | 8)
+
+# print(5 & 8)
+# print(5 | 8)
+# print(5 ^ 8)
+# print(~ -18)
+# print(5 << 2)
+# print(7 << 4)   #112 
+# print(5 >> 2)
+# a = 1
 
 # studentName1 = "ravi"
 # studentName2 = "ravi"
