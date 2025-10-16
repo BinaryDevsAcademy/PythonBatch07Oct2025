@@ -63,6 +63,24 @@
     7. write a program to print a table of user choice but only print the even numbers
 """
 
+""" 
+    prime number : divided by 1 and itself only -- 2 times
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+    
+    4 - 1,2,3,4
+    
+    algo : 
+    1. take a number, count = 0 --> is prime or not // 5 - 1,2,3,4,5
+        //count counts the zero when we are performing the modulo division
+    2. take a for loop range starts from 1 and ends at number + 1 and store the number inside a variable i // range(1, 6)
+    3. check if the rem of n%i is equal to 0 --> increase count value by 1
+    4. end of the loop
+    5. check if the count value is equal to 2 --> print prime number
+    6. if count value is greater than or less than 2 --> print non prime number
+    7. end of code
+"""
+
+
 # variable = 1
 # #loop has to run only when the variable value is either less than 10 or equal to 10. if it higher than 10 loop has to stop.
 # while variable <= 10:
@@ -178,3 +196,15 @@
 
 # print(f"You entered a value of {value}")
 # print("You entered value of "+value)
+
+# break, continue, pass
+
+#break - stops the iteration of the loop and exit
+#continue - skips the single iteration of the loop and then proceed with the next iteration
+#pass - does nothing
+
+for i in range(5):
+    print("Enters into the loop")
+    if(i == 3):
+        pass
+    print(i)
