@@ -50,18 +50,67 @@ returning multiple values inside a function:
         return value1, value2,...
 
 *args, **kwargs
+
+Resursive : function calling itself
+-> fast
+
+syntax : 
+    def functionName(para1):
+        //stop statment
+        condition
+        
+        return functionName(updatedArg)
+        
+lambda functions : 1 line function
+syntax : 
+    variable = lambda para:ops
 """
+""" 
+    map : create a duplicate iterator list
+    map Syntax : 
+        map(lambdaExpression, list)
+    
+    filter : create a duplicate iterator list but it filters out the data
+        if we are returning true then it will store the value which is at the iteration
+        else it will not
+"""
+# lExpression = lambda x: x ** 2
 
-def cal(operation, **numbers):
-    result = 0
-    print(numbers)
-    if(operation == "add"):
-        for i in numbers['numbers']:
-            result += i
+sampleList = [1,2,3,4,5,6,7,8] #2,4,6,8
 
-    return result
+lExpression = lambda x: x%2 != 0
 
-print(cal(operation = 'add',numbers = [1,2,3,4,5,6,7]))
+updatedList = filter(lExpression, sampleList)
+
+print(list(updatedList))
+
+# updatedList = map(lExpression, sampleList)
+
+# print(list(updatedList))
+
+# add = lambda a,b: a + b
+
+# list = lambda r: [x for x in range(r)]
+
+# # print(add(3,4))
+
+# def resursiveFunction(a):
+#     print(a)
+#     if a == 10:
+#         return
+#     return resursiveFunction(a + 1)
+
+# # resursiveFunction(1)
+# def cal(operation, **numbers):
+#     result = 0
+#     print(numbers)
+#     if(operation == "add"):
+#         for i in numbers['numbers']:
+#             result += i
+
+#     return result
+
+# # print(cal(operation = 'add',numbers = [1,2,3,4,5,6,7]))
 # def sample(a,**b):
 #     print(a, b)
 
@@ -124,3 +173,32 @@ print(cal(operation = 'add',numbers = [1,2,3,4,5,6,7]))
 # print("after function")
 
 # sample()
+
+# map - create duplicate copy
+# filter
+# reduce
+
+import copy
+
+def isPrime(value):
+    count = 0
+    for i in range(1, value + 1):
+        if value%i == 0:
+            count += 1
+    
+    if count == 2:
+        return True
+    else:
+        return False
+
+a = [1,2,3,4,5]
+b = list(map(lambda x:x**3 , a))
+c = copy.copy(a)
+d = list(filter(lambda x: isPrime(x), a))
+
+a[0] = 11
+
+print(a)
+print(b)
+print(c)
+print(d)
